@@ -50,7 +50,7 @@ All bundled tools are unmodified upstream releases under GPL-3.0 (see `third_par
 You don't need pogo pins or a probe station. This is the setup used for the boards above:
 
 - Dupont jumpers from the ST-Link V2 header (**SWCLK, SWDIO, GND**, as printed on the stick) go to alligator-clip leads.
-- A **sewing needle** is clamped in each of the two SWD clips. The needle tips are your probes for pins 24 and 23.
+- A **sewing needle** is clamped in each of the two SWD clips: **green = SWCLK**, **yellow = SWDIO**, matching the needle map. SWD has no standard wire colours, so just keep your clips consistent with the map. The needle tips are your probes for pins 24 and 23.
 - The third clip (GND) goes onto the ESC battery-negative pad or lead.
 - Leave the ST-Link 3.3V and 5.0V pins unconnected.
 
