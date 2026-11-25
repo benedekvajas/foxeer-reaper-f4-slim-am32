@@ -2,7 +2,7 @@
 
 How to convert the **Foxeer Reaper F4 Slim Mini 128K 60A 4-in-1 ESC (BL32 version, MR1682, board marking `ESC1103 V1_1`)** from BLHeli_32 to [AM32](https://github.com/am32-firmware/AM32). Everything you need is in this repo.
 
-> **Status: the pin map below has not yet been confirmed on real hardware.** It is derived from the chip markings and the board layout. Check the pin-1 dimple on every chip before you probe. If something doesn't match, please open an issue.
+> **Status: tested.** This procedure has been used to convert 6 of these boards to AM32. Still check the pin-1 dimple on every chip before you probe, because a board revision could differ. If something doesn't match, please open an issue.
 
 > **Warning:** the conversion is effectively irreversible, and a slipped needle on a powered board can kill the ESC. You do this at your own risk.
 
