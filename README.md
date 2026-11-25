@@ -31,6 +31,7 @@ These are from the AM32 source, [`Inc/targets.h`](https://github.com/am32-firmwa
 | `tools/zadig/zadig-2.9.exe` | Windows USB driver tool, needed for the ST-Link | [pbatard/libwdi](https://github.com/pbatard/libwdi/releases) / [zadig.akeo.ie](https://zadig.akeo.ie) |
 | `firmware/AM32_FOXEER_F421_2.20.hex` | AM32 2.20 for this ESC | [am32-firmware/AM32 v2.20](https://github.com/am32-firmware/AM32/releases/tag/v2.20) |
 | `docs/needle-map.jpg` | Where to put the needles on each of the 4 MCUs | this repo |
+| `docs/probe-setup.jpg` | ST-Link with needles in alligator clips | this repo |
 | `SHA256SUMS` | Checksums of the bundled binaries | |
 
 All bundled tools are unmodified upstream releases under GPL-3.0 (see `third_party-licenses/`). Check upstream for newer versions.
@@ -38,9 +39,22 @@ All bundled tools are unmodified upstream releases under GPL-3.0 (see `third_par
 ## You also need
 
 - An **ST-Link V2** (a cheap clone works). CMSIS-DAP and J-Link also work with the unlocker.
-- Two fine needle probes, ideally mounted so they can't slide, plus a magnifier or microscope.
+- 3 alligator-clip leads, 3 Dupont jumpers, 2 sewing needles, and a magnifier or microscope (see Probe setup).
 - A current-limited bench supply, or a LiPo with a smoke stopper.
 - A Betaflight flight controller wired to the ESC as normal, and Chrome or Edge for [am32.ca](https://am32.ca).
+
+## Probe setup (needles in alligator clips)
+
+![ST-Link V2 with needles held in alligator clips](docs/probe-setup.jpg)
+
+You don't need pogo pins or a probe station. This is the setup used for the boards above:
+
+- Dupont jumpers from the ST-Link V2 header (**SWCLK, SWDIO, GND**, as printed on the stick) go to alligator-clip leads.
+- A **sewing needle** is clamped in each of the two SWD clips. The needle tips are your probes for pins 24 and 23.
+- The third clip (GND) goes onto the ESC battery-negative pad or lead.
+- Leave the ST-Link 3.3V and 5.0V pins unconnected.
+
+Hold both needles together like chopsticks, at a steep angle, so the tips rest on the outer edge of the two QFN pads. Keep them still until the unlocker reports Success. Pins 23 and 24 are 0.5 mm apart, so make sure the tips don't touch each other.
 
 ## Needle map
 
